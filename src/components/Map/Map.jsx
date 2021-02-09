@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import ReactMapGL, { Layer, Marker, Source, NavigationControl } from "react-map-gl";
 
 import mapSettings from "../../utils/mapSettings";
@@ -6,9 +7,9 @@ import "../Map/Map.css";
 
 const Map = () => {
   const [viewport, setViewport] = useState({
-    latitude: -41.292757,
-    longitude: 174.790984,
-    zoom: 11.5,
+    latitude: -41.30601,
+    longitude: 174.79062,
+    zoom: 11.75,
     bearing: 0,
     pitch: 0,
     width: "100vw",
@@ -37,7 +38,6 @@ const Map = () => {
         setHomeZones(
           <Source type="geojson" data={resData.data} id="source">
           <Layer {...mapSettings.layer.zoneLines}/>
-          {/* <Layer {...mapSettings.layer.zoneFill} /> */}
         </Source>
         );
       });
@@ -46,6 +46,7 @@ const Map = () => {
 
   return (
     <div>
+      <Container>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -53,6 +54,7 @@ const Map = () => {
         onViewportChange={(viewport) => {
           setViewport(viewport);
         }}
+        scrollZoom={false}
         ref={mapRef}
       >
         {homeZones}
@@ -73,6 +75,7 @@ const Map = () => {
         ))}
         <NavigationControl style={mapSettings.navControl} />
       </ReactMapGL>
+      </Container>
     </div>
   );
 };

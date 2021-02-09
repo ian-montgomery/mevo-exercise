@@ -24,7 +24,7 @@ const mapSettings = {
     },
 
     navControl: {
-        right: 10,
+        right: 18,
         top: 10
     }
 }
