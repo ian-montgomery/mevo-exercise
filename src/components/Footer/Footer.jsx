@@ -11,13 +11,13 @@ const Footer = () => {
           <div>
             <h4>wellington</h4>
             <li>
-              <a href="#">Vehicles</a>
+              <a href="https://mevo.co.nz/wellington/vehicles">Vehicles</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href="https://mevo.co.nz/wellington/pricing">Pricing</a>
             </li>
             <li>
-              <a href="#">Term and Conditions</a>
+              <a href="https://mevo.co.nz/wellington/terms-and-conditions">Term and Conditions</a>
             </li>
           </div>
           </Col>
@@ -25,13 +25,13 @@ const Footer = () => {
           <div>
             <h4>product</h4>
             <li>
-              <a href="#">The Mevo App </a>
+              <a href="https://mevo.co.nz/app">The Mevo App </a>
             </li>
             <li>
-              <a href="#">Climate Positive</a>
+              <a href="https://mevo.co.nz/climate-positive">Climate Positive</a>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <a href="https://mevo.co.nz/faq">FAQs</a>
             </li>
           </div>
           </Col>
@@ -39,13 +39,13 @@ const Footer = () => {
           <div>
             <h4>company</h4>
             <li>
-              <a href="#">Team</a>
+              <a href="https://mevo.co.nz/team">Team</a>
             </li>
             <li>
-              <a href="#">Press</a>
+              <a href="https://mevo.co.nz/press">Press</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="https://mevo.co.nz/contact">Contact</a>
             </li>
           </div>
           </Col>
