@@ -10,4 +10,8 @@
     background-size: cover;
     width: 33px;
     height: 46px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
   }

@@ -56,14 +56,13 @@ const Map = () => {
         ref={mapRef}
       >
         {homeZones}
-        {vehicles.map((marker) => (
+        {vehicles.map((marker, index) => (
           <Marker
-            key={
-              parseFloat(marker.position.longitude) +
-              parseFloat(marker.position.latitude)
-            }
+            key={index}
             longitude={parseFloat(marker.position.longitude)}
             latitude={parseFloat(marker.position.latitude)}
+            offsetTop={-20}
+            offsetLeft={-10}
           >
             <img
               src={marker.iconUrl}
