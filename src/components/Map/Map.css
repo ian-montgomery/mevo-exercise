@@ -1,12 +1,24 @@
-.map-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+#map{
+  display: flex;
+  align-items: center;
+  border-bottom: 0px;
+  font-weight: 400;
 
-  .mevo-marker {
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+.remove-all-margin-padding{
+    margin:0 ! important;
+    padding:0 ! important;
+}
+
+.mevo-marker {
     background-size: cover;
     width: 33px;
     height: 46px;
@@ -14,4 +26,4 @@
     top: 0;
     left: 0;
     will-change: transform;
-  }
+}

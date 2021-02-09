@@ -1,0 +1,17 @@
+#footer {
+    height: 40vh;
+    background-color: #00afdd;
+    color: #fff;
+    text-align: left;
+    padding-top: 5rem;
+    text-decoration: none;
+}
+
+
+a,
+h4,
+li {
+  list-style: none;
+  text-decoration: none;
+  padding-top: 1rem;
+}

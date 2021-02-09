@@ -1,6 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
-import ReactMapGL, { Layer, Marker, Source, NavigationControl } from "react-map-gl";
+import { Container, Row, Col } from "react-bootstrap";
+import ReactMapGL, {
+  Layer,
+  Marker,
+  Source,
+  NavigationControl,
+} from "react-map-gl";
 
 import mapSettings from "../../utils/mapSettings";
 import "../Map/Map.css";
@@ -12,7 +17,7 @@ const Map = () => {
     zoom: 11.75,
     bearing: 0,
     pitch: 0,
-    width: "100vw",
+    width: "99.2vw",
     height: "60vh",
   });
 
@@ -37,44 +42,47 @@ const Map = () => {
       .then((resData) => {
         setHomeZones(
           <Source type="geojson" data={resData.data} id="source">
-          <Layer {...mapSettings.layer.zoneLines}/>
-        </Source>
+            <Layer {...mapSettings.layer.zoneLines} />
+          </Source>
         );
       });
   }, [homeZones]);
-  
 
   return (
-    <div>
-      <Container>
-      <ReactMapGL
-        {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        mapStyle="mapbox://styles/mapbox/streets-v11"
-        onViewportChange={(viewport) => {
-          setViewport(viewport);
-        }}
-        scrollZoom={false}
-        ref={mapRef}
-      >
-        {homeZones}
-        {vehicles.map((marker, index) => (
-          <Marker
-            key={index}
-            longitude={parseFloat(marker.position.longitude)}
-            latitude={parseFloat(marker.position.latitude)}
-            offsetTop={-20}
-            offsetLeft={-10}
-          >
-            <img
-              src={marker.iconUrl}
-              alt="Mevo vehicle position"
-              className="mevo-marker"
-            />
-          </Marker>
-        ))}
-        <NavigationControl style={mapSettings.navControl} />
-      </ReactMapGL>
+    <div id="map">
+      <Container className="remove-all-margin-padding">
+        <Row>
+          <Col lg={12}>
+            <ReactMapGL
+              {...viewport}
+              mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+              mapStyle="mapbox://styles/mapbox/streets-v11"
+              onViewportChange={(viewport) => {
+                setViewport(viewport);
+              }}
+              scrollZoom={false}
+              ref={mapRef}
+            >
+              {homeZones}
+              {vehicles.map((marker, index) => (
+                <Marker
+                  key={index}
+                  longitude={parseFloat(marker.position.longitude)}
+                  latitude={parseFloat(marker.position.latitude)}
+                  offsetTop={-20}
+                  offsetLeft={-10}
+                >
+                  <img
+                    src={marker.iconUrl}
+                    alt="Mevo vehicle position"
+                    className="mevo-marker"
+                  />
+                </Marker>
+              ))}
+              <NavigationControl style={mapSettings.navControl} />
+            </ReactMapGL>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
