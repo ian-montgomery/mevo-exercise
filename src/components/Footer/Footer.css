@@ -7,11 +7,14 @@
     text-decoration: none;
 }
 
+h4 {
+    font-style:italic;
+}
 
 a,
-h4,
 li {
   list-style: none;
   text-decoration: none;
   padding-top: 1rem;
+  color: #fff !important;
 }

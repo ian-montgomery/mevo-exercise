@@ -11,13 +11,13 @@ const Footer = () => {
           <div>
             <h4>wellington</h4>
             <li>
-              <a>Vehicles</a>
+              <a href="#">Vehicles</a>
             </li>
             <li>
-              <a>Pricing</a>
+              <a href="#">Pricing</a>
             </li>
             <li>
-              <a>Term and Conditions</a>
+              <a href="#">Term and Conditions</a>
             </li>
           </div>
           </Col>
@@ -25,13 +25,13 @@ const Footer = () => {
           <div>
             <h4>product</h4>
             <li>
-              <a>The Mevo App </a>
+              <a href="#">The Mevo App </a>
             </li>
             <li>
-              <a>Climate Positive</a>
+              <a href="#">Climate Positive</a>
             </li>
             <li>
-              <a>FAQs</a>
+              <a href="#">FAQs</a>
             </li>
           </div>
           </Col>
@@ -39,13 +39,13 @@ const Footer = () => {
           <div>
             <h4>company</h4>
             <li>
-              <a>Team</a>
+              <a href="#">Team</a>
             </li>
             <li>
-              <a>Press</a>
+              <a href="#">Press</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="#">Contact</a>
             </li>
           </div>
           </Col>
