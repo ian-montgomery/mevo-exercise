@@ -21,7 +21,7 @@ const Map = () => {
     height: "60vh",
   });
 
-  const mapRef = useRef();
+ 
   //Fetch the vehicle data
   const [vehicles, setVehicles] = useState([]);
 
@@ -61,7 +61,6 @@ const Map = () => {
                 setViewport(viewport);
               }}
               scrollZoom={false}
-              ref={mapRef}
             >
               {homeZones}
               {vehicles.map((marker, index) => (
