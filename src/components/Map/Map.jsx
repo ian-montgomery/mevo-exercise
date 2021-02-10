@@ -61,6 +61,7 @@ const Map = () => {
                 setViewport(viewport);
               }}
               scrollZoom={false}
+              zoom={11.75}
             >
               {homeZones}
               {vehicles.map((marker, index) => (
