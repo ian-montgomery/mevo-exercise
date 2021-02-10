@@ -55,7 +55,7 @@ const Map = () => {
           <Col lg={12}>
             <ReactMapGL
               {...viewport}
-              mapboxApiAccessToken="pk.eyJ1IjoiaWFuYXJ0aHVyIiwiYSI6ImNra29rYzRxNzAzbWYydXFzYXJ1dXhxbjcifQ.rr2cv5pYYllKBu8yOto7QA"
+              mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
               mapStyle="mapbox://styles/mapbox/streets-v11"
               onViewportChange={(viewport) => {
                 setViewport(viewport);
