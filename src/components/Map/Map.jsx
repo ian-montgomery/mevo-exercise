@@ -6,15 +6,14 @@ import ReactMapGL, {
   Source,
   NavigationControl,
 } from "react-map-gl";
-import mapboxgl from 'mapbox-gl'
+import mapSettings from "../../utils/mapSettings";
+import "../Map/Map.css";
 import 'mapbox-gl/dist/mapbox-gl.css'
+import mapboxgl from 'mapbox-gl'
 
 //@ts-ignore
 //eslint-disable-next-line import/no-webpack-loader-syntax
-mapboxgl.workerClass = require('worker-loader!mapbox-gl-csp-worker').default
-
-import mapSettings from "../../utils/mapSettings";
-import "../Map/Map.css";
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default
 
 const Map = () => {
   const [viewport, setViewport] = useState({
